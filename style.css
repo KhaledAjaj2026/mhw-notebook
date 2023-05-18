@@ -1,0 +1,127 @@
+body {
+  background-image: url("./assets/astera.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto 4rem;
+}
+
+.AF {
+  background-image: url("./assets/ancient-forest.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto 4rem;
+}
+
+.WW {
+  background-image: url("./assets/wildspire-waste.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto 4rem;
+}
+
+.CH {
+  background-image: url("./assets/coral-highlands.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto 4rem;
+}
+
+.RV {
+  background-image: url("./assets/rotten-vale.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto 4rem;
+}
+
+.ER {
+  background-image: url("./assets/elder-recess.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto 4rem;
+}
+
+h1, h3, footer {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+footer {
+  margin-top: 10px;
+  padding: 0.7em;
+  background-color: #896565;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: large;
+  color: white;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+code {
+  background-color: #ebb3b3;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: sans-serif;
+  font-size: 2em;
+}
+
+p {
+  font-family: sans-serif;
+  font-size: 1.25em;
+}
+
+hr {
+  margin-top: 1em;
+  border: 1px solid black;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-around;
+}
+.nav-menu button {
+  background: none;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.3rem;
+  padding: 5px;
+  border: 1px dashed black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.main_area {
+  background-color: rgba(235, 210, 194, 0.8);
+  border: 2px solid black;
+  height: 70vh;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.panels {
+  display: flex;
+  justify-content: center;
+}
+
+.left-panel, .right-panel {
+  margin: 1.5em;
+  padding: 2em;
+  display: block;
+  border: 1px solid black;
+  border-radius: 15px;
+  height: 50vh;
+}
+
+.right-panel {
+  width: 80vw;
+}
+.right-panel h3 {
+  margin-top: -0.5rem;
+}
+.right-panel span {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=style.css.map */

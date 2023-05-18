@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon-mhw.jpg">
+    <script src="script.js"></script>
+    <title>RANDOM SITE</title>
+</head>
+<header>
+    <h1>Monster Hunter World<br>Hunter's Notes</h1>
+    <h3>A guide to every monster's traits, weaknesses, and rewards.</h3>
+</header>
+<body class="">
+    <main class="main_area">
+        <nav>
+            <div class="nav-menu">
+                <button id="af" onclick="changeBG('af')">Ancient Forest</button>
+                <button id="ww" onclick="changeBG('ww')">Wildspire Waste</button>
+                <button id="ch" onclick="changeBG('ch')">Coral Highlands</button>
+                <button id="rv" onclick="changeBG('rv')">Rotten Vale</button>
+                <button id="er" onclick="changeBG('er')">Elder Recess</button>
+            </div>
+        </nav>
+        <hr>
+        <div class="panels">
+            <div class="left-panel">
+                <h2 class="title">Select Monster</h2>
+                <p>Use the dropdown menu below to select a monster.</p>
+                <form action="" method="get">
+                    <label for="monsters"></label>
+                    <select id="monster-list" name="monsters">
+                        <option>Choose...</option>
+                        <option value="great-jagras">Great Jagras</option>
+                    </select>
+                    <input type="submit">Find</input>
+                </form>
+                <button onclick="FindMonster()">Start Fetch</button>
+            </div>
+            <div class="right-panel">
+                <h3>Output:</h3>
+                <div class="content-card">
+                    <span>Name: </span>
+                    <p id="name"></p>
+                    <span>Species: </span>
+                    <p id="species"></p>
+                    <span>Description: </span>
+                    <p id="description"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<footer>Khaled Ajaj, 2023</footer>
+</html>
