@@ -6,38 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="./assets/favicon-mhw.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Instrument+Serif&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
     <script src="script.js"></script>
-    <title>RANDOM SITE</title>
+    <title>MHW - Hunter's Notes</title>
 </head>
 <header>
-    <h1>Monster Hunter World<br>Hunter's Notes</h1>
+    <h1 class="main-header">MONSTER HUNTER WORLD</h1>
+    <h1 class="add-header">Hunter's Notes</h1>
     <h3>A guide to every monster's traits, weaknesses, and rewards.</h3>
 </header>
 <body class="">
     <main class="main_area">
-        <nav>
-            <div class="nav-menu">
-                <button id="af" onclick="changeBG('af')">Ancient Forest</button>
-                <button id="ww" onclick="changeBG('ww')">Wildspire Waste</button>
-                <button id="ch" onclick="changeBG('ch')">Coral Highlands</button>
-                <button id="rv" onclick="changeBG('rv')">Rotten Vale</button>
-                <button id="er" onclick="changeBG('er')">Elder Recess</button>
-            </div>
-        </nav>
-        <hr>
         <div class="panels">
             <div class="left-panel">
                 <h2 class="title">Select Monster</h2>
                 <p>Use the dropdown menu below to select a monster.</p>
-                <form action="" method="get">
-                    <label for="monsters"></label>
-                    <select id="monster-list" name="monsters">
-                        <option>Choose...</option>
-                        <option value="great-jagras">Great Jagras</option>
-                    </select>
-                    <input type="submit">Find</input>
-                </form>
-                <button onclick="FindMonster()">Start Fetch</button>
+                <select class="invisible" name="monster-dropdown">
+                    <option>Choose...</option>
+                    <option value="17">Great Jagras</option>
+                    <option value="19">Pukei-Pukei</option>
+                    <option value="22">Tobi-Kadachi</option>
+                    <option value="23">Anjanath</option>
+                    <option value="42">Rathalos</option>
+                    <option value="27">Deviljho</option>
+                    <option value="20">Barroth</option>
+                    <option value="18">Kulu-Ya-Ku</option>
+                    <option value="21">Jyuratodus</option>
+                    <option value="43">Rathian</option>
+                    <option value="28">Diablos</option>
+                    <option value="29">Black Diablos</option>
+                    <option value="48">Tzitzi-Ya-Ku</option>
+                    <option value="40">Paolumu</option>
+                    <option value="36">Legiana</option>
+                    <option value="32">Kirin</option>
+                    <option value="25">Bazelgeuse</option>
+                    <option value="31">Great Girros</option>
+                    <option value="39">Odogaron</option>
+                    <option value="41">Radobaan</option>
+                    <option value="50">Vaal Hazak</option>
+                    <option value="30">Dodogama</option>
+                    <option value="35">Lavasioth</option>
+                    <option value="49">Uragaan</option>
+                    <option value="38">Nergigante</option>
+                    <option value="34">Kushala Daora</option>
+                    <option value="45">Teostra</option>
+                </select>
+                <button onclick="FetchMonster()">Start Fetch</button>
             </div>
             <div class="right-panel">
                 <h3>Output:</h3>

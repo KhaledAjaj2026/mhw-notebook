@@ -5,39 +5,25 @@ $ch: './assets/coral-highlands.png';
 $rv: './assets/rotten-vale.png';
 $er: './assets/elder-recess.png';
 
-@mixin habitat($bg: './assets/astera.jpeg') {
-    background-image: url($bg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: auto 4rem;
-}
-
-body {
-    @include habitat($bg: $ast);
-}
-.AF {
-    @include habitat($bg: $af);
-}
-.WW {
-    @include habitat($bg: $ww);
-}
-.CH {
-    @include habitat($bg: $ch);
-}
-.RV {
-    @include habitat($bg: $rv);
-}
-.ER {
-    @include habitat($bg: $er);
-}
-
 h1, h3, footer {
     text-align: center;
     font-family: sans-serif;
 }
 
+.main-header {
+    font-family: 'Instrument Serif', 'Times New Roman', Times, serif;
+    font-size: 3em;
+}
+.add-header {
+    font-family: 'Instrument Serif', 'Times New Roman', Times, serif;
+    font-size: 2.5em;
+    margin-top: -20px;
+}
+
+
 footer {
-    margin-top: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
     padding: 0.7em;
     background-color: rgb(137, 101, 101);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -54,8 +40,12 @@ code {
 }
 
 h2 {
-    font-family: sans-serif;
+    font-family: 'DM Serif Display', sans-serif;
     font-size: 2em;
+}
+
+h3 {
+    font-family: 'DM Serif Display', sans-serif;
 }
 
 p {

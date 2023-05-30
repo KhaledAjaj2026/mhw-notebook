@@ -1,52 +1,22 @@
-body {
-  background-image: url("./assets/astera.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: auto 4rem;
-}
-
-.AF {
-  background-image: url("./assets/ancient-forest.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: auto 4rem;
-}
-
-.WW {
-  background-image: url("./assets/wildspire-waste.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: auto 4rem;
-}
-
-.CH {
-  background-image: url("./assets/coral-highlands.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: auto 4rem;
-}
-
-.RV {
-  background-image: url("./assets/rotten-vale.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: auto 4rem;
-}
-
-.ER {
-  background-image: url("./assets/elder-recess.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: auto 4rem;
-}
-
 h1, h3, footer {
   text-align: center;
   font-family: sans-serif;
 }
 
+.main-header {
+  font-family: "Instrument Serif", "Times New Roman", Times, serif;
+  font-size: 3em;
+}
+
+.add-header {
+  font-family: "Instrument Serif", "Times New Roman", Times, serif;
+  font-size: 2.5em;
+  margin-top: -20px;
+}
+
 footer {
-  margin-top: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
   padding: 0.7em;
   background-color: #896565;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -63,8 +33,12 @@ code {
 }
 
 h2 {
-  font-family: sans-serif;
+  font-family: "DM Serif Display", sans-serif;
   font-size: 2em;
+}
+
+h3 {
+  font-family: "DM Serif Display", sans-serif;
 }
 
 p {
