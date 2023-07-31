@@ -1,25 +1,3 @@
-// Object to hold all large monsters.
-let monstObj = {};
-// Create MHW data for every large monster.
-// Used for matching names with id only.
-async function FetchMonsterAll() {
-	let response = await fetch(`https://mhw-db.com/monsters/`);
-	let data = await response.json();
-	for (let i = 0; i < data.length; i++) {
-		if (data[i].type === 'large') {
-			monstObj[i] = [];
-			monstObj[i].push(
-				data[i].id,
-				data[i].name,
-				data[i].locations[0].name,
-				data[i].locations[0].id
-			);
-		}
-	}
-	console.log(monstObj);
-}
-FetchMonsterAll();
-
 // get monster's name from search input.
 let searchInput = document.getElementsByName('monster-search');
 
@@ -47,6 +25,7 @@ async function FetchMonster() {
 	// output data as text on right panel.
 	document.getElementById('name').innerHTML = target.name;
 	document.getElementById('species').innerHTML = target.species;
+	document.getElementById('biome').innerHTML = target.locations[0].name;
 	document.getElementById('description').innerHTML = target.description;
 }
 function changeBiome(area) {}
