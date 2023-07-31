@@ -20,10 +20,21 @@ async function FetchMonsterAll() {
 }
 FetchMonsterAll();
 
+// get monster's name from search input.
+let searchInput = document.getElementsByName('monster-search');
+
+// Event listener for pressing 'Enter' button on keyboard.
+window.addEventListener('keydown', (event) => {
+	if (searchInput[0].value && event.key === 'Enter') {
+		FetchMonster();
+		searchInput[0].value = '';
+	}
+});
+
 // fetch monster data (name, species, biome/s, description, resistances & weaknesses, rewards).
 async function FetchMonster() {
-	// get monster's name from search input.
-	const monsterName = document.getElementsByName('monster-search')[0].value;
+	// get monster name from search.
+	const monsterName = searchInput[0].value;
 	// fetch data of provided monster name.
 	const response = await fetch(`https://mhw-db.com/monsters/`);
 	const data = await response.json();
