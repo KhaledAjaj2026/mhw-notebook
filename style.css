@@ -5,52 +5,30 @@
 .ast {
   background-image: url("./assets/astera.jpeg");
 }
-.ast header {
-  color: black;
-  background-color: rgba(255, 255, 255, 0.6);
-}
 
 .af {
   background-image: url("./assets/ancient-forest.png");
-}
-.af header {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .ww {
   background-image: url("./assets/wildspire-waste.png");
 }
-.ww header {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.6);
-}
 
 .ch {
   background-image: url("./assets/coral-highlands.png");
-}
-.ch header {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .rv {
   background-image: url("./assets/rotten-vale.png");
 }
-.rv header {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.6);
-}
 
 .er {
   background-image: url("./assets/elder-recess.png");
 }
-.er header {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.6);
-}
 
 header {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
   width: 40%;
   margin-top: 20px;
@@ -123,7 +101,7 @@ hr {
 span,
 p,
 .search-title {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.7em;
 }
 
 .search-title {

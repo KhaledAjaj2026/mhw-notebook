@@ -9,37 +9,28 @@ $ch: './assets/coral-highlands.png';
 $rv: './assets/rotten-vale.png';
 $er: './assets/elder-recess.png';
 
-$dark-bg: rgba(0, 0, 0, 0.6);
-$white-bg: rgba(255, 255, 255, 0.6);
-
-@mixin title-bg($image, $text-color, $bg-color) {
-	background-image: url($image);
-	header {
-		color: $text-color;
-		background-color: $bg-color;
-	}
-}
-
 .ast {
-	@include title-bg($ast, black, $white-bg);
+	background-image: url($ast);
 }
 .af {
-	@include title-bg($af, white, $dark-bg);
+	background-image: url($af);
 }
 .ww {
-	@include title-bg($ww, white, $dark-bg);
+	background-image: url($ww);
 }
 .ch {
-	@include title-bg($ch, white, $dark-bg);
+	background-image: url($ch);
 }
 .rv {
-	@include title-bg($rv, white, $dark-bg);
+	background-image: url($rv);
 }
 .er {
-	@include title-bg($er, white, $dark-bg);
+	background-image: url($er);
 }
 
 header {
+	color: white;
+	background-color: rgba(0, 0, 0, 0.6);
 	text-align: center;
 	width: 40%;
 	margin-top: 20px;

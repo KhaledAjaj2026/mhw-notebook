@@ -36,6 +36,21 @@ function changeBiome(area) {
 		case 'Ancient Forest':
 			document.body.className = 'af';
 			break;
+		case 'Wildspire Waste':
+			document.body.className = 'ww';
+			break;
+		case 'Coral Highlands':
+			document.body.className = 'ch';
+			break;
+		case 'Rotten Vale':
+			document.body.className = 'rv';
+			break;
+		case "Elder's Recess":
+			document.body.className = 'er';
+			break;
+		case 'Ancient Forest':
+			document.body.className = 'af';
+			break;
 
 		default:
 			break;
