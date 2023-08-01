@@ -26,6 +26,30 @@
   background-image: url("./assets/elder-recess.png");
 }
 
+.hr {
+  background-image: url("./assets/hoarfrost-reach.jpg");
+}
+
+.coed {
+  background-image: url("./assets/caverns-of-el-dorado.jpg");
+}
+
+.cof {
+  background-image: url("./assets/confluence-of-fates.jpeg");
+}
+
+.gr {
+  background-image: url("./assets/great-ravine.jpg");
+}
+
+.gl {
+  background-image: url("./assets/guiding-lands.jpg");
+}
+
+.sv {
+  background-image: url("./assets/secluded-valley.jpg");
+}
+
 header {
   color: white;
   background-color: rgba(0, 0, 0, 0.6);

@@ -8,6 +8,12 @@ $ww: './assets/wildspire-waste.png';
 $ch: './assets/coral-highlands.png';
 $rv: './assets/rotten-vale.png';
 $er: './assets/elder-recess.png';
+$hr: './assets/hoarfrost-reach.jpg';
+$coed: './assets/caverns-of-el-dorado.jpg';
+$cof: './assets/confluence-of-fates.jpeg';
+$gr: './assets/great-ravine.jpg';
+$gl: './assets/guiding-lands.jpg';
+$sv: './assets/secluded-valley.jpg';
 
 .ast {
 	background-image: url($ast);
@@ -26,6 +32,24 @@ $er: './assets/elder-recess.png';
 }
 .er {
 	background-image: url($er);
+}
+.hr {
+	background-image: url($hr);
+}
+.coed {
+	background-image: url($coed);
+}
+.cof {
+	background-image: url($cof);
+}
+.gr {
+	background-image: url($gr);
+}
+.gl {
+	background-image: url($gl);
+}
+.sv {
+	background-image: url($sv);
 }
 
 header {
