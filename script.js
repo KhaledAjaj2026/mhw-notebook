@@ -27,5 +27,17 @@ async function FetchMonster() {
 	document.getElementById('species').innerHTML = target.species;
 	document.getElementById('biome').innerHTML = target.locations[0].name;
 	document.getElementById('description').innerHTML = target.description;
+	// call function 'changeBiome' with monster's main location as parameter.
+	changeBiome(target.locations[0].name);
 }
-function changeBiome(area) {}
+
+function changeBiome(area) {
+	switch (area) {
+		case 'Ancient Forest':
+			document.body.className = 'af';
+			break;
+
+		default:
+			break;
+	}
+}
