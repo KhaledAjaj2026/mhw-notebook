@@ -1,10 +1,10 @@
-let monstObj = new Set();
+let monstObj = {};
 async function fetchMonstersAll() {
 	const response = await fetch(`https://mhw-db.com/monsters/`);
 	const data = await response.json();
 	for (let i = 0; i < data.length; i++) {
-		if (data[i].type === 'large' && !monstObj.has(data[i].locations[0])) {
-			monstObj.add(data[i].locations[0].name);
+		if (data[i].type === 'large') {
+			monstObj[i] = data[i].name;
 		}
 	}
 }
