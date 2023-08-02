@@ -22,6 +22,11 @@ window.addEventListener('keydown', (event) => {
 	}
 });
 
+// Event listener for search-bar input, used for auto-complete.
+window.addEventListener('keypress', (event) => {
+	autoComplete(event.key);
+});
+
 // fetch monster data (name, species, biome/s, description, resistances & weaknesses, rewards).
 async function FetchMonster() {
 	// get monster name from search.
