@@ -26,6 +26,7 @@ window.addEventListener('keydown', (event) => {
 	}
 	if (searchInput[0].value && event.key === 'Enter') {
 		FetchMonster();
+		word = [];
 	}
 });
 
@@ -46,6 +47,7 @@ async function FetchMonster() {
 	// Input is invalid, does not return monster.
 	if (!target) {
 		searchInput[0].value = '';
+		word = [];
 		alert('Monster not found, or incorrect input.');
 	}
 	// output data as text on right panel.

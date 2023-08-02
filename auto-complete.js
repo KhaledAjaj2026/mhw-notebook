@@ -55,24 +55,63 @@ class Trie {
 	}
 }
 
-const newTrie = new Trie();
-newTrie.insert('Kulu-Ya-Ku');
-newTrie.insert('Kulve Taroth');
-newTrie.insert('Kirin');
-newTrie.insert('Kushala Daora');
-newTrie.insert('Great Jagras');
-newTrie.insert('Great Girros');
+// Initialize new trie for all monster names.
+const monsterNamesTrie = new Trie();
+monsterNamesTrie.insert('Great Jagras');
+monsterNamesTrie.insert('Kulu-Ya-Ku');
+monsterNamesTrie.insert('Pukei-Pukei');
+monsterNamesTrie.insert('Barroth');
+monsterNamesTrie.insert('Jyuratodus');
+monsterNamesTrie.insert('Tobi-Kadachi');
+monsterNamesTrie.insert('Anjanath');
+monsterNamesTrie.insert('Azure Rathalos');
+monsterNamesTrie.insert('Bazelgeuse');
+monsterNamesTrie.insert('Behemoth');
+monsterNamesTrie.insert('Deviljho');
+monsterNamesTrie.insert('Diablos');
+monsterNamesTrie.insert('Black Diablos');
+monsterNamesTrie.insert('Dodogama');
+monsterNamesTrie.insert('Great Girros');
+monsterNamesTrie.insert('Kirin');
+monsterNamesTrie.insert('Kulve Taroth');
+monsterNamesTrie.insert('Kushala Daora');
+monsterNamesTrie.insert('Lavasioth');
+monsterNamesTrie.insert('Legiana');
+monsterNamesTrie.insert('Lunastra');
+monsterNamesTrie.insert('Nergigante');
+monsterNamesTrie.insert('Odogaron');
+monsterNamesTrie.insert('Paolumu');
+monsterNamesTrie.insert('Radobaan');
+monsterNamesTrie.insert('Rathalos');
+monsterNamesTrie.insert('Rathian');
+monsterNamesTrie.insert('Pink Rathian');
+monsterNamesTrie.insert('Teostra');
+monsterNamesTrie.insert('Tzitzi-Ya-Ku');
+monsterNamesTrie.insert('Uragaan');
+monsterNamesTrie.insert('Vaal Hazak');
+monsterNamesTrie.insert("Xeno'jiiva");
+monsterNamesTrie.insert('Zorah Magdaros');
+monsterNamesTrie.insert('Leshen');
+monsterNamesTrie.insert('Ancient Leshen');
+monsterNamesTrie.insert("Safi'jiiva");
+monsterNamesTrie.insert('Stygian Zinogre');
+monsterNamesTrie.insert('Rajang');
+monsterNamesTrie.insert('Viper Tobi-Kadachi');
+monsterNamesTrie.insert('Namielle');
+monsterNamesTrie.insert('Zinogre');
 
+// Current word being searched.
 let word = [];
 
+// Auto-complete function for search bar.
 function autoComplete(input) {
 	if (input === 'Backspace') {
 		word.pop();
 		if (word.length > 0) {
-			console.log(newTrie.find(word));
+			console.log(monsterNamesTrie.find(word));
 		}
 	} else {
 		word.push(input);
-		console.log(newTrie.find(word));
+		console.log(monsterNamesTrie.find(word));
 	}
 }
