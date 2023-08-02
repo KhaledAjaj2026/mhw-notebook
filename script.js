@@ -1,11 +1,11 @@
 // Object to view data as an object in DevTools.
-let monstObj = {};
+let monstObj = [];
 async function fetchMonstersAll() {
 	const response = await fetch(`https://mhw-db.com/monsters/`);
 	const data = await response.json();
 	for (let i = 0; i < data.length; i++) {
 		if (data[i].type === 'large') {
-			monstObj[i] = data[i].name;
+			monstObj.push(data[i].name);
 		}
 	}
 }
@@ -14,20 +14,23 @@ console.log(monstObj);
 
 // get monster's name from search input.
 let searchInput = document.getElementsByName('monster-search');
+// RegExp for checking if search-bar input is English alphabet.
+const alphabet = /^[A-Za-z]+$/;
 
-// Event listener for pressing 'Enter' button on keyboard.
+// Event listener for keyboard input.
 window.addEventListener('keydown', (event) => {
+	if (event.key === 'Backspace') {
+		autoComplete('Backspace');
+	} else if (event.key.length === 1 && event.key.match(alphabet)) {
+		autoComplete(event.key);
+	}
 	if (searchInput[0].value && event.key === 'Enter') {
 		FetchMonster();
 	}
 });
 
-// Event listener for search-bar input, used for auto-complete.
-window.addEventListener('keypress', (event) => {
-	autoComplete(event.key);
-});
-
-// fetch monster data (name, species, biome/s, description, resistances & weaknesses, rewards).
+// fetch monster data (name, species, biome/s, description,
+// resistances & weaknesses, rewards).
 async function FetchMonster() {
 	// get monster name from search.
 	const monsterName = searchInput[0].value;
@@ -39,6 +42,11 @@ async function FetchMonster() {
 		if (data[i].name === monsterName) {
 			target = data[i];
 		}
+	}
+	// Input is invalid, does not return monster.
+	if (!target) {
+		searchInput[0].value = '';
+		alert('Monster not found, or incorrect input.');
 	}
 	// output data as text on right panel.
 	document.getElementById('name').innerHTML = target.name;
