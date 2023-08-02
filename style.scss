@@ -69,6 +69,7 @@ header {
 
 body {
 	background-size: cover;
+	image-rendering: optimizeSpeed;
 }
 
 .main-header {
@@ -128,8 +129,10 @@ hr {
 	justify-content: center;
 	align-items: center;
 	img {
-		width: 250px;
-		margin: 10%;
+		image-rendering: optimizeSpeed;
+		height: 90%;
+		width: auto;
+		margin: 10px;
 	}
 }
 
