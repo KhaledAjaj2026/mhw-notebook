@@ -2,6 +2,8 @@
 	margin: 0;
 }
 
+/* Background Image Variables */
+
 $ast: './assets/astera.jpeg';
 $af: './assets/ancient-forest.png';
 $ww: './assets/wildspire-waste.png';
@@ -15,6 +17,7 @@ $gr: './assets/great-ravine.jpg';
 $gl: './assets/guiding-lands.jpg';
 $sv: './assets/secluded-valley.jpg';
 
+/* Background Image classes */
 .ast {
 	background-image: url($ast);
 }
@@ -113,6 +116,21 @@ hr {
 	border: 1px solid black;
 	border-radius: 5px;
 	height: 55vh;
+}
+
+#monster-image {
+	border: 2px solid black;
+	border-radius: 5px;
+	margin-top: 50px;
+	height: 53%;
+	background-color: rgb(180, 158, 145);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	img {
+		width: 250px;
+		margin: 10%;
+	}
 }
 
 .right-panel {

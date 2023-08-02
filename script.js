@@ -1,3 +1,12 @@
+// Monsters Image Links
+const monsterImgLinks = {
+	greatJagras:
+		'https://static.wikia.nocookie.net/monsterhunter/images/f/f5/MHW-Great_Jagras_Render_001.png/revision/latest?cb=20171012121738',
+	kuluYaku:
+		'https://static.wikia.nocookie.net/monsterhunter/images/0/0e/MHRise-Kulu-Ya-Ku_Render_001.png/revision/latest?cb=20210308150155',
+};
+
+// Object to view data as an object in DevTools.
 let monstObj = {};
 async function fetchMonstersAll() {
 	const response = await fetch(`https://mhw-db.com/monsters/`);
@@ -41,7 +50,21 @@ async function FetchMonster() {
 	document.getElementById('description').innerHTML = target.description;
 	// call function 'changeBiome' with monster's main location as parameter.
 	changeBiome(target.locations[0].name);
+	monsterImg(target.name);
 	searchInput[0].value = '';
+}
+
+function monsterImg(name) {
+	switch (name) {
+		case 'Great Jagras':
+			document.querySelector('img').src = monsterImgLinks.greatJagras;
+			break;
+		case 'Kulu-Ya-Ku':
+			document.querySelector('img').src = monsterImgLinks.kuluYaku;
+			break;
+		default:
+			break;
+	}
 }
 
 function changeBiome(area) {
