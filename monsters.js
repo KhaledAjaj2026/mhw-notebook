@@ -1,6 +1,4 @@
 // List of all large monster names, used for auto-complete.
-const monsterNames = ['Kulu-Ya-Ku', 'Kirin', 'Kulve Taroth', 'Kushala Daora'];
-
 const monstersImgLinks = {
 	greatJagras:
 		'https://static.wikia.nocookie.net/monsterhunter/images/f/f5/MHW-Great_Jagras_Render_001.png/revision/latest?cb=20171012121738',

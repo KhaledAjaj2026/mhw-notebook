@@ -15,13 +15,13 @@ console.log(monstObj);
 // get monster's name from search input.
 let searchInput = document.getElementsByName('monster-search');
 // RegExp for checking if search-bar input is English alphabet.
-const alphabet = /^[A-Za-z]+$/;
+const alphabet = new RegExp(/[A-Za-z]|\W/);
 
 // Event listener for keyboard input.
 window.addEventListener('keydown', (event) => {
 	if (event.key === 'Backspace') {
 		autoComplete('Backspace');
-	} else if (event.key.length === 1 && event.key.match(alphabet)) {
+	} else if (event.key.length === 1 && alphabet.test(event.key)) {
 		autoComplete(event.key);
 	}
 	if (searchInput[0].value && event.key === 'Enter') {
