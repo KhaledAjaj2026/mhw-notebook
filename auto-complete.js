@@ -1,3 +1,4 @@
+// class to create node for Trie.
 class TrieNode {
 	constructor(key) {
 		this.key = key;
@@ -15,6 +16,7 @@ class TrieNode {
 		return output.join('');
 	}
 }
+// Trie used for autocomplete for search bar.
 class Trie {
 	constructor() {
 		this.root = new TrieNode(null);
@@ -102,16 +104,38 @@ monsterNamesTrie.insert('Zinogre');
 
 // Current word being searched.
 let word = [];
+// Element that shows autocomplete options below search bar.
+const dropdown = document.getElementById('autocomplete-options');
+
+// Helper function for loading suggestiosn.
 
 // Auto-complete function for search bar.
 function autoComplete(input) {
+	// If 'Backspace' then remove all current children, then
+	// load suggestions of new input.
 	if (input === 'Backspace') {
 		word.pop();
+		while (dropdown.firstChild) {
+			dropdown.removeChild(dropdown.firstChild);
+		}
 		if (word.length > 0) {
-			console.log(monsterNamesTrie.find(word));
+			for (let i = 0; i < monsterNamesTrie.find(word).length; i++) {
+				const newSuggestion = document.createElement('p');
+				newSuggestion.innerHTML = monsterNamesTrie.find(word)[i];
+				console.log(newSuggestion);
+				dropdown.appendChild(newSuggestion);
+			}
 		}
 	} else {
 		word.push(input);
-		console.log(monsterNamesTrie.find(word));
+		while (dropdown.firstChild) {
+			dropdown.removeChild(dropdown.firstChild);
+		}
+		for (let i = 0; i < monsterNamesTrie.find(word).length; i++) {
+			const newSuggestion = document.createElement('p');
+			newSuggestion.innerHTML = monsterNamesTrie.find(word)[i];
+			console.log(newSuggestion);
+			dropdown.appendChild(newSuggestion);
+		}
 	}
 }

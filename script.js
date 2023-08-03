@@ -27,6 +27,9 @@ window.addEventListener('keydown', (event) => {
 	if (searchInput[0].value && event.key === 'Enter') {
 		FetchMonster();
 		word = [];
+		while (dropdown.firstChild) {
+			dropdown.removeChild(dropdown.firstChild);
+		}
 	}
 });
 
