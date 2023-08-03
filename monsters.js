@@ -11,7 +11,7 @@ const monstersImgLinks = {
 	barroth:
 		'https://static.wikia.nocookie.net/monsterhunter/images/3/3a/MHRise-Barroth_Render_001.png/revision/latest?cb=20210501170957',
 	jyuratodus:
-		'https://static.wikia.nocookie.net/monsterhunter/images/7/70/MHRise-Jyuratodus_Render_001.png/revision/latest?cb=20210308135419',
+		'https://static.wikia.nocookie.net/dragons/images/e/ed/MHW-Jyuratodus_Render_001.png/revision/latest?cb=20171213092710',
 	tobiKadachi:
 		'https://static.wikia.nocookie.net/monsterhunter/images/2/22/MHRise-Tobi-Kadachi_Render_001.png/revision/latest?cb=20210308135404',
 	viperTobiKadachi:

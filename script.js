@@ -43,9 +43,26 @@ document.querySelector('input').addEventListener('input', (event) => {
 	}
 });
 
+/** Show loading animation while fetch in progress. */
+function showLoading() {
+	document.getElementById('loading').classList.add('display');
+	setTimeout(() => {
+		document.getElementById('loading').classList.remove('display');
+	}, 5000);
+}
+
+/** Hide loading animation once fetch is complete. */
+function hideLoading() {
+	document.getElementById('loading').classList.remove('display');
+}
+
 /**  fetch monster data (name, species, biome/s, description,
 resistances & weaknesses, rewards). */
 async function FetchMonster() {
+	let prevImg = document.querySelector('img').src;
+	console.log(prevImg);
+	document.querySelector('img').src = '';
+	showLoading();
 	// get monster name from search.
 	const monsterName = searchInput[0].value;
 	// fetch data of provided monster name.
@@ -62,17 +79,22 @@ async function FetchMonster() {
 		searchInput[0].value = '';
 		word = [];
 		alert('Monster not found, or incorrect input.');
+		hideLoading();
+		document.querySelector('img').src = prevImg;
+	} else {
+		// output data as text on right panel.
+		document.getElementById('name').innerHTML = target.name;
+		document.getElementById('species').innerHTML = target.species;
+		document.getElementById('biome').innerHTML = target.locations[0].name;
+		document.getElementById('description').innerHTML = target.description;
+		// call functions 'changeBiome' and 'monsterImg' with monster's name and
+		// main location as parameters, respectively.
+		changeBiome(target.locations[0].name);
+		monsterImg(target.name);
+		prevImg = document.querySelector('img').src;
+		searchInput[0].value = '';
+		hideLoading();
 	}
-	// output data as text on right panel.
-	document.getElementById('name').innerHTML = target.name;
-	document.getElementById('species').innerHTML = target.species;
-	document.getElementById('biome').innerHTML = target.locations[0].name;
-	document.getElementById('description').innerHTML = target.description;
-	// call functions 'changeBiome' and 'monsterImg' with monster's name and
-	// main location as parameters, respectively.
-	changeBiome(target.locations[0].name);
-	monsterImg(target.name);
-	searchInput[0].value = '';
 }
 
 /**  Change site background to monster's main biome. */
