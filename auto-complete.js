@@ -1,4 +1,4 @@
-// class to create node for Trie.
+/**  Class to create node for Trie. */
 class TrieNode {
 	constructor(key) {
 		this.key = key;
@@ -16,7 +16,7 @@ class TrieNode {
 		return output.join('');
 	}
 }
-// Trie used for autocomplete for search bar.
+/**  Trie used for autocomplete for search bar. */
 class Trie {
 	constructor() {
 		this.root = new TrieNode(null);
@@ -57,8 +57,9 @@ class Trie {
 	}
 }
 
-// Initialize new trie for all monster names.
+/**  Trie to store all monster names. */
 const monsterNamesTrie = new Trie();
+// Add all monster names via 'insert' so trie can build nodes with names.
 monsterNamesTrie.insert('Great Jagras');
 monsterNamesTrie.insert('Kulu-Ya-Ku');
 monsterNamesTrie.insert('Pukei-Pukei');
@@ -102,40 +103,49 @@ monsterNamesTrie.insert('Viper Tobi-Kadachi');
 monsterNamesTrie.insert('Namielle');
 monsterNamesTrie.insert('Zinogre');
 
-// Current word being searched.
+/**  Current word being searched. */
 let word = [];
-// Element that shows autocomplete options below search bar.
+/**  Element that shows autocomplete options below search bar. */
 const dropdown = document.getElementById('autocomplete-options');
 
-// Helper function for loading suggestiosn.
+/**  Helper function for loading suggestions */
+function loadSuggestions() {
+	for (let i = 0; i < monsterNamesTrie.find(word).length; i++) {
+		const newSuggestion = document.createElement('p');
+		newSuggestion.appendChild(
+			document.createTextNode(monsterNamesTrie.find(word)[i])
+		);
+		dropdown.appendChild(newSuggestion);
+	}
+}
+/**  Helper function for deleting all suggestions. */
+function deleteSuggestions() {
+	while (dropdown.firstChild) {
+		dropdown.removeChild(dropdown.firstChild);
+	}
+}
 
-// Auto-complete function for search bar.
+/**  Auto-complete function for search bar. */
 function autoComplete(input) {
-	// If 'Backspace' then remove all current children, then
+	// If 'Backspace' then remove all current suggestions, then
 	// load suggestions of new input.
 	if (input === 'Backspace') {
 		word.pop();
-		while (dropdown.firstChild) {
-			dropdown.removeChild(dropdown.firstChild);
-		}
+		lastInput--;
+		deleteSuggestions();
+		// If-statement to prevent loading all names on an
+		// empty word array.
 		if (word.length > 0) {
-			for (let i = 0; i < monsterNamesTrie.find(word).length; i++) {
-				const newSuggestion = document.createElement('p');
-				newSuggestion.innerHTML = monsterNamesTrie.find(word)[i];
-				console.log(newSuggestion);
-				dropdown.appendChild(newSuggestion);
-			}
+			loadSuggestions();
 		}
-	} else {
+		console.log('wordDel: ' + word.join(''));
+	}
+	// Otherwise, add new input to word array, clear previous
+	// suggestions, and load new ones.
+	else {
 		word.push(input);
-		while (dropdown.firstChild) {
-			dropdown.removeChild(dropdown.firstChild);
-		}
-		for (let i = 0; i < monsterNamesTrie.find(word).length; i++) {
-			const newSuggestion = document.createElement('p');
-			newSuggestion.innerHTML = monsterNamesTrie.find(word)[i];
-			console.log(newSuggestion);
-			dropdown.appendChild(newSuggestion);
-		}
+		console.log('wordAdd: ' + word.join(''));
+		deleteSuggestions();
+		loadSuggestions();
 	}
 }

@@ -117,6 +117,28 @@ hr {
   height: 55vh;
 }
 
+#monster-search {
+  width: 200px;
+}
+
+#autocomplete-options {
+  background-color: white;
+  width: 200px;
+  position: absolute;
+}
+#autocomplete-options p {
+  margin: 0;
+  border-top: 1px solid black;
+  font-size: 1em;
+  font-family: "DM Serif Display", sans-serif;
+  padding-left: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#autocomplete-options p:hover {
+  cursor: pointer;
+}
+
 #monster-image {
   border: 2px solid black;
   border-radius: 5px;

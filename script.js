@@ -1,40 +1,50 @@
-// Object to view data as an object in DevTools.
-let monstObj = [];
-async function fetchMonstersAll() {
-	const response = await fetch(`https://mhw-db.com/monsters/`);
-	const data = await response.json();
-	for (let i = 0; i < data.length; i++) {
-		if (data[i].type === 'large') {
-			monstObj.push(data[i].name);
-		}
-	}
-}
-fetchMonstersAll();
-console.log(monstObj);
+/**  Object to view data as an object in DevTools. */
+// let monstObj = [];
+// async function fetchMonstersAll() {
+// 	const response = await fetch(`https://mhw-db.com/monsters/`);
+// 	const data = await response.json();
+// 	for (let i = 0; i < data.length; i++) {
+// 		if (data[i].type === 'large') {
+// 			monstObj.push(data[i].name);
+// 		}
+// 	}
+// }
+// fetchMonstersAll();
+// console.log(monstObj);
 
-// get monster's name from search input.
+/**  Get monster's name from search input. */
 let searchInput = document.getElementsByName('monster-search');
-// RegExp for checking if search-bar input is English alphabet.
-const alphabet = new RegExp(/[A-Za-z]|\W/);
+/**  RegExp for checking if search-bar input is English alphabet or space or hyphen. */
+const inputRegex = new RegExp(/^[a-z]|-|\s$/i);
 
-// Event listener for keyboard input.
-window.addEventListener('keydown', (event) => {
+// Event listener for 'Backspace' or 'Enter'.
+document.querySelector('input').addEventListener('keyup', (event) => {
 	if (event.key === 'Backspace') {
 		autoComplete('Backspace');
-	} else if (event.key.length === 1 && alphabet.test(event.key)) {
-		autoComplete(event.key);
-	}
-	if (searchInput[0].value && event.key === 'Enter') {
+	} else if (event.key === 'Enter') {
 		FetchMonster();
 		word = [];
-		while (dropdown.firstChild) {
-			dropdown.removeChild(dropdown.firstChild);
-		}
+		lastInput = 0;
+		deleteSuggestions();
 	}
 });
 
-// fetch monster data (name, species, biome/s, description,
-// resistances & weaknesses, rewards).
+let lastInput = 0;
+// Event listener for keyboard input.
+document.querySelector('input').addEventListener('input', (event) => {
+	let char = event.target.value;
+	if (
+		char.length > lastInput &&
+		searchInput[0].value.length > 0 &&
+		inputRegex.test(char)
+	) {
+		lastInput++;
+		autoComplete(char[char.length - 1]);
+	}
+});
+
+/**  fetch monster data (name, species, biome/s, description,
+resistances & weaknesses, rewards). */
 async function FetchMonster() {
 	// get monster name from search.
 	const monsterName = searchInput[0].value;
@@ -65,7 +75,7 @@ async function FetchMonster() {
 	searchInput[0].value = '';
 }
 
-// Change site background to monster's main biome.
+/**  Change site background to monster's main biome. */
 function changeBiome(area) {
 	switch (area) {
 		case 'Ancient Forest':

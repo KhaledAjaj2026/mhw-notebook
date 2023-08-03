@@ -1,4 +1,4 @@
-// List of all large monster names, used for auto-complete.
+/**  List of all large monster names, used for auto-complete. */
 const monstersImgLinks = {
 	greatJagras:
 		'https://static.wikia.nocookie.net/monsterhunter/images/f/f5/MHW-Great_Jagras_Render_001.png/revision/latest?cb=20171012121738',
@@ -86,7 +86,7 @@ const monstersImgLinks = {
 		'https://static.wikia.nocookie.net/monsterhunter/images/d/d6/MHWI-Namielle_Render_001.png/revision/latest/scale-to-width-down/1200?cb=20190829150307',
 };
 
-// Retrieve image link of monster online.
+/**  Retrieve image link of monster online. */
 function monsterImg(name) {
 	switch (name) {
 		case 'Great Jagras':
