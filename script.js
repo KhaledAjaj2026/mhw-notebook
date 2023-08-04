@@ -8,10 +8,6 @@ document.querySelector('input').addEventListener('keyup', (event) => {
 	if (event.key === 'Backspace') {
 		autoComplete('Backspace');
 	} else if (event.key === 'Enter') {
-		// FetchMonster();
-		// word = [];
-		// lastInput = 0;
-		// deleteSuggestions();
 		commenceFetchAndClear();
 	}
 });
@@ -23,13 +19,26 @@ let lastInput = 0;
 // Event listener for keyboard input.
 document.querySelector('input').addEventListener('input', (event) => {
 	let char = event.target.value;
+	if (char.length === 0) {
+		lastInput = 0;
+		word = [];
+	}
 	if (
 		char.length > lastInput &&
 		searchInput[0].value.length > 0 &&
 		inputRegex.test(char)
 	) {
+		if (
+			(char[char.length - 1] === char[char.length - 1].toLowerCase() &&
+				searchInput[0].value.length === 1) ||
+			word[char.length - 2] === ' ' ||
+			word[char.length - 2] === '-'
+		) {
+			autoComplete(char[char.length - 1].toUpperCase());
+		} else {
+			autoComplete(char[char.length - 1]);
+		}
 		lastInput++;
-		autoComplete(char[char.length - 1]);
 	}
 });
 
@@ -58,7 +67,7 @@ async function FetchMonster() {
 	document.querySelector('img').src = '';
 	showLoading();
 	// get monster name from search.
-	const monsterName = searchInput[0].value;
+	const monsterName = word.join('');
 	// fetch data of provided monster name.
 	const response = await fetch(`https://mhw-db.com/monsters/`);
 	const data = await response.json();
@@ -95,8 +104,6 @@ async function FetchMonster() {
 		}
 		prevImg = document.querySelector('img').src;
 		searchInput[0].value = '';
-		// word = [];
-		// deleteSuggestions();
 		hideLoading();
 	}
 }

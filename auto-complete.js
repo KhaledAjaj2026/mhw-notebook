@@ -121,10 +121,7 @@ function loadSuggestions() {
 		newSuggestion.addEventListener('focus', focusSuggestion.bind('this', i));
 		newSuggestion.addEventListener('keydown', (event) => {
 			if (event.key === 'Enter') {
-				FetchMonster();
-				word = [];
-				lastInput = 0;
-				deleteSuggestions();
+				commenceFetchAndClear();
 			}
 		});
 	}
@@ -162,10 +159,20 @@ function autoComplete(input) {
 /** Suggestion clicked is filled into search bar. */
 function selectSuggestion(n) {
 	searchInput[0].value = document.getElementById(`option-${n}`).textContent;
+	word = [];
+	for (let i = 0; i < searchInput[0].value.length; i++) {
+		word.push(searchInput[0].value[i]);
+	}
+	console.log(word.join(''));
 	searchInput[0].focus();
 }
 
 /** If focused suggestion and 'Enter' is pressed on keyboard. */
 function focusSuggestion(f) {
 	searchInput[0].value = document.getElementById(`option-${f}`).textContent;
+	word = [];
+	for (let i = 0; i < searchInput[0].value.length; i++) {
+		word.push(searchInput[0].value[i]);
+	}
+	console.log(word.join(''));
 }
