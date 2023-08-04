@@ -8,13 +8,17 @@ document.querySelector('input').addEventListener('keyup', (event) => {
 	if (event.key === 'Backspace') {
 		autoComplete('Backspace');
 	} else if (event.key === 'Enter') {
-		FetchMonster();
-		word = [];
-		lastInput = 0;
-		deleteSuggestions();
+		// FetchMonster();
+		// word = [];
+		// lastInput = 0;
+		// deleteSuggestions();
+		commenceFetchAndClear();
 	}
 });
 
+/** Length of previous input into search bar, used to prevent input of
+ * keys such as 'Shift'.
+ */
 let lastInput = 0;
 // Event listener for keyboard input.
 document.querySelector('input').addEventListener('input', (event) => {
@@ -39,6 +43,14 @@ function hideLoading() {
 	document.getElementById('loading').classList.remove('display');
 }
 
+/** Helper function for executing data fetch and clearing input & suggestion data. */
+function commenceFetchAndClear() {
+	FetchMonster();
+	word = [];
+	lastInput = 0;
+	deleteSuggestions();
+}
+
 /**  fetch monster data (name, species, biome/s, description,
 resistances & weaknesses, rewards). */
 async function FetchMonster() {
@@ -56,7 +68,7 @@ async function FetchMonster() {
 			target = data[i];
 		}
 	}
-	// Input is invalid, does not return monster.
+	// Input is invalid, does not return monster and previous image is returned to view.
 	if (!target) {
 		searchInput[0].value = '';
 		word = [];
@@ -83,8 +95,8 @@ async function FetchMonster() {
 		}
 		prevImg = document.querySelector('img').src;
 		searchInput[0].value = '';
-		deleteSuggestions();
-		word = [];
+		// word = [];
+		// deleteSuggestions();
 		hideLoading();
 	}
 }
