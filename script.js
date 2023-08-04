@@ -77,6 +77,7 @@ async function FetchMonster() {
 		// main location as parameters, respectively.
 		changeBiome(target.locations[0].name);
 		monsterImg(target.name);
+		changeInformationCard('description');
 		prevImg = document.querySelector('img').src;
 		searchInput[0].value = '';
 		deleteSuggestions();
