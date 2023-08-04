@@ -34,15 +34,43 @@
                 </div>
             </div>
             <div class="right-panel">
-                <div class="content-card">
-                    <span>Name: </span>
-                    <p id="name"></p>
-                    <span>Species: </span>
-                    <p id="species"></p>
-                    <span>Main Biome: </span>
-                    <p id="biome"></p>
-                    <span>Description: </span>
-                    <p id="description"></p>
+                <nav class="info-tabs">
+                    <div id="tab_description" onclick="changeInformationCard('description')">Description</div>
+                    <div id="tab_weakness-vulnerable" onclick="changeInformationCard('weakness')">Weak/Vuln.</div>
+                    <div id="tab_rewards" onclick="changeInformationCard('reward')">Rewards</div>
+                </nav>
+                <hr>
+                <div class="info-cards">
+                    <div id="card_description" class="">
+                        <span>Name: </span>
+                        <p id="name">description</p>
+                        <span>Species: </span>
+                        <p id="species">description</p>
+                        <span>Main Biome: </span>
+                        <p id="biome">description</p>
+                        <span>Description: </span>
+                        <p id="description">description</p>
+                    </div>
+                    <div id="card_weakness-vulnerable" class="hidden">
+                        <span>Name: </span>
+                        <p id="name">weakness</p>
+                        <span>Species: </span>
+                        <p id="species">weakness</p>
+                        <span>Main Biome: </span>
+                        <p id="biome">weakness</p>
+                        <span>Description: </span>
+                        <p id="description">weakness</p>
+                    </div>
+                    <div id="card_reward" class="hidden">
+                        <span>Name: </span>
+                        <p id="name">reward</p>
+                        <span>Species: </span>
+                        <p id="species">reward</p>
+                        <span>Main Biome: </span>
+                        <p id="biome">reward</p>
+                        <span>Description: </span>
+                        <p id="description">reward</p>
+                    </div>
                 </div>
             </div>
         </div>

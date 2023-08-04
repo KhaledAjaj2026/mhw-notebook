@@ -126,3 +126,25 @@ function changeBiome(area) {
 			break;
 	}
 }
+
+/** Change information card being shown by clicking on navigation tab. */
+function changeInformationCard(card) {
+	if (card === 'description') {
+		console.log('clicked, card is descirption');
+		document.getElementById('card_description').classList.remove('hidden');
+		document.getElementById('card_weakness-vulnerable').classList.add('hidden');
+		document.getElementById('card_reward').classList.add('hidden');
+	} else if (card === 'weakness') {
+		console.log('clicked, card is wekaness');
+		document.getElementById('card_description').classList.add('hidden');
+		document
+			.getElementById('card_weakness-vulnerable')
+			.classList.remove('hidden');
+		document.getElementById('card_reward').classList.add('hidden');
+	} else if (card === 'reward') {
+		console.log('clicked, card is rewad');
+		document.getElementById('card_description').classList.add('hidden');
+		document.getElementById('card_weakness-vulnerable').classList.add('hidden');
+		document.getElementById('card_reward').classList.remove('hidden');
+	}
+}
