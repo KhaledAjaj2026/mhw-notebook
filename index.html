@@ -36,40 +36,30 @@
             <div class="right-panel">
                 <nav class="info-tabs">
                     <div id="tab_description" onclick="changeInformationCard('description')">Description</div>
-                    <div id="tab_weakness-vulnerable" onclick="changeInformationCard('weakness')">Weak/Vuln.</div>
+                    <div id="tab_weakness-resistance" onclick="changeInformationCard('weakness')">Weak/Restst.</div>
                     <div id="tab_rewards" onclick="changeInformationCard('reward')">Rewards</div>
                 </nav>
                 <hr>
                 <div class="info-cards">
-                    <div id="card_description" class="">
+                    <div id="card_description" class="card">
                         <span>Name: </span>
-                        <p id="name">description</p>
+                        <p id="name"></p>
                         <span>Species: </span>
-                        <p id="species">description</p>
+                        <p id="species"></p>
                         <span>Main Biome: </span>
-                        <p id="biome">description</p>
+                        <p id="biome"></p>
                         <span>Description: </span>
-                        <p id="description">description</p>
+                        <p id="description"></p>
                     </div>
-                    <div id="card_weakness-vulnerable" class="hidden">
-                        <span>Name: </span>
-                        <p id="name">weakness</p>
-                        <span>Species: </span>
-                        <p id="species">weakness</p>
-                        <span>Main Biome: </span>
-                        <p id="biome">weakness</p>
-                        <span>Description: </span>
-                        <p id="description">weakness</p>
+                    <div id="card_weakness" class="card hide">
+                        <span>Weaknesses: </span>
+                        <ul id="weaknesses"></ul>
+                        <span>Resistances: </span>
+                        <ul id="resistances"></ul>
                     </div>
-                    <div id="card_reward" class="hidden">
-                        <span>Name: </span>
-                        <p id="name">reward</p>
-                        <span>Species: </span>
-                        <p id="species">reward</p>
-                        <span>Main Biome: </span>
-                        <p id="biome">reward</p>
-                        <span>Description: </span>
-                        <p id="description">reward</p>
+                    <div id="card_reward" class="card hide">
+                        <span>Rewards: </span>
+                        <ul id="rewards"></ul>
                     </div>
                 </div>
             </div>

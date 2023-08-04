@@ -26,16 +26,12 @@ document.querySelector('input').addEventListener('input', (event) => {
 	) {
 		lastInput++;
 		autoComplete(char[char.length - 1]);
-		console.log(word.join(''));
 	}
 });
 
 /** Show loading animation while fetch in progress. */
 function showLoading() {
 	document.getElementById('loading').classList.add('display');
-	setTimeout(() => {
-		document.getElementById('loading').classList.remove('display');
-	}, 5000);
 }
 
 /** Hide loading animation once fetch is complete. */
@@ -69,20 +65,71 @@ async function FetchMonster() {
 		document.querySelector('img').src = prevImg;
 	} else {
 		// output data as text on right panel.
-		document.getElementById('name').innerHTML = target.name;
-		document.getElementById('species').innerHTML = target.species;
-		document.getElementById('biome').innerHTML = target.locations[0].name;
-		document.getElementById('description').innerHTML = target.description;
+		document.getElementById('name').textContent = target.name;
+		document.getElementById('species').textContent = target.species;
+		document.getElementById('biome').textContent = target.locations[0].name;
+		document.getElementById('description').textContent = target.description;
+		populateWeaknesses(target);
+		populateResistances(target);
+		populateRewards(target);
 		// call functions 'changeBiome' and 'monsterImg' with monster's name and
 		// main location as parameters, respectively.
 		changeBiome(target.locations[0].name);
 		monsterImg(target.name);
-		changeInformationCard('description');
+		if (
+			document.getElementById('card_description').classList.contains('hide')
+		) {
+			changeInformationCard('description');
+		}
 		prevImg = document.querySelector('img').src;
 		searchInput[0].value = '';
 		deleteSuggestions();
 		word = [];
 		hideLoading();
+	}
+}
+
+/** Load weaknesses as list-items in DOM. */
+function populateWeaknesses(target) {
+	const weakList = document.getElementById('weaknesses');
+	while (weakList.firstChild) {
+		weakList.removeChild(weakList.firstChild);
+	}
+	for (let i = 0; i < target.weaknesses.length; i++) {
+		const w = document.createElement('li');
+		const text = document.createTextNode(target.weaknesses[i].element);
+		w.appendChild(text);
+		weakList.appendChild(w);
+	}
+}
+/** Load resistances as list-items in DOM. */
+function populateResistances(target) {
+	const resisList = document.getElementById('resistances');
+	while (resisList.firstChild) {
+		resisList.removeChild(resisList.firstChild);
+	}
+	for (let i = 0; i < target.resistances.length; i++) {
+		const w = document.createElement('li');
+		const text = document.createTextNode(target.resistances[i].element);
+		w.appendChild(text);
+		resisList.appendChild(w);
+	}
+}
+/** Load rewards as list-items in DOM. */
+function populateRewards(target) {
+	const rewardList = document.getElementById('rewards');
+	while (rewardList.firstChild) {
+		rewardList.removeChild(rewardList.firstChild);
+	}
+	if (target.rewards.length === 0) {
+		rewardList.textContent = 'No Rewards';
+	} else {
+		for (let i = 0; i < target.rewards.length; i++) {
+			const w = document.createElement('li');
+			const text = document.createTextNode(target.rewards[i].item.name);
+			w.appendChild(text);
+			rewardList.appendChild(w);
+		}
 	}
 }
 
@@ -131,21 +178,16 @@ function changeBiome(area) {
 /** Change information card being shown by clicking on navigation tab. */
 function changeInformationCard(card) {
 	if (card === 'description') {
-		console.log('clicked, card is descirption');
-		document.getElementById('card_description').classList.remove('hidden');
-		document.getElementById('card_weakness-vulnerable').classList.add('hidden');
-		document.getElementById('card_reward').classList.add('hidden');
+		document.getElementById('card_description').classList.remove('hide');
+		document.getElementById('card_weakness').classList.add('hide');
+		document.getElementById('card_reward').classList.add('hide');
 	} else if (card === 'weakness') {
-		console.log('clicked, card is wekaness');
-		document.getElementById('card_description').classList.add('hidden');
-		document
-			.getElementById('card_weakness-vulnerable')
-			.classList.remove('hidden');
-		document.getElementById('card_reward').classList.add('hidden');
+		document.getElementById('card_description').classList.add('hide');
+		document.getElementById('card_weakness').classList.remove('hide');
+		document.getElementById('card_reward').classList.add('hide');
 	} else if (card === 'reward') {
-		console.log('clicked, card is rewad');
-		document.getElementById('card_description').classList.add('hidden');
-		document.getElementById('card_weakness-vulnerable').classList.add('hidden');
-		document.getElementById('card_reward').classList.remove('hidden');
+		document.getElementById('card_description').classList.add('hide');
+		document.getElementById('card_weakness').classList.add('hide');
+		document.getElementById('card_reward').classList.remove('hide');
 	}
 }
