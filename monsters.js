@@ -189,7 +189,7 @@ function monsterImg(name) {
 			document.querySelector('img').src = monstersImgLinks.xenoJiiva;
 			break;
 		case 'Zorah Magdaros':
-			document.querySelector('img').src = monstersImgLinks.greatJagras;
+			document.querySelector('img').src = monstersImgLinks.zorahMagdaros;
 			break;
 		case 'Leshin':
 			document.querySelector('img').src = monstersImgLinks.leshen;

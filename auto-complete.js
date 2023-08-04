@@ -107,15 +107,15 @@ monsterNamesTrie.insert('Zinogre');
 let word = [];
 /**  Element that shows autocomplete options below search bar. */
 const dropdown = document.getElementById('autocomplete-options');
-
 /**  Helper function for loading suggestions */
 function loadSuggestions() {
 	for (let i = 0; i < monsterNamesTrie.find(word).length; i++) {
 		const newSuggestion = document.createElement('p');
-		newSuggestion.appendChild(
-			document.createTextNode(monsterNamesTrie.find(word)[i])
-		);
+		const suggestion = document.createTextNode(monsterNamesTrie.find(word)[i]);
+		newSuggestion.appendChild(suggestion);
 		dropdown.appendChild(newSuggestion);
+		newSuggestion.setAttribute('id', `option-${i}`);
+		newSuggestion.addEventListener('click', selectSuggestion.bind('this', i));
 	}
 }
 /**  Helper function for deleting all suggestions. */
@@ -138,14 +138,18 @@ function autoComplete(input) {
 		if (word.length > 0) {
 			loadSuggestions();
 		}
-		console.log('wordDel: ' + word.join(''));
 	}
 	// Otherwise, add new input to word array, clear previous
 	// suggestions, and load new ones.
 	else {
 		word.push(input);
-		console.log('wordAdd: ' + word.join(''));
 		deleteSuggestions();
 		loadSuggestions();
 	}
+}
+
+/** Suggestion clicked is filled into search bar. */
+function selectSuggestion(n) {
+	searchInput[0].value = document.getElementById(`option-${n}`).textContent;
+	searchInput[0].focus();
 }

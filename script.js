@@ -1,17 +1,3 @@
-/**  Object to view data as an object in DevTools. */
-// let monstObj = [];
-// async function fetchMonstersAll() {
-// 	const response = await fetch(`https://mhw-db.com/monsters/`);
-// 	const data = await response.json();
-// 	for (let i = 0; i < data.length; i++) {
-// 		if (data[i].type === 'large') {
-// 			monstObj.push(data[i].name);
-// 		}
-// 	}
-// }
-// fetchMonstersAll();
-// console.log(monstObj);
-
 /**  Get monster's name from search input. */
 let searchInput = document.getElementsByName('monster-search');
 /**  RegExp for checking if search-bar input is English alphabet or space or hyphen. */
@@ -60,7 +46,6 @@ function hideLoading() {
 resistances & weaknesses, rewards). */
 async function FetchMonster() {
 	let prevImg = document.querySelector('img').src;
-	console.log(prevImg);
 	document.querySelector('img').src = '';
 	showLoading();
 	// get monster name from search.
