@@ -26,6 +26,7 @@ document.querySelector('input').addEventListener('input', (event) => {
 	) {
 		lastInput++;
 		autoComplete(char[char.length - 1]);
+		console.log(word.join(''));
 	}
 });
 
@@ -78,6 +79,8 @@ async function FetchMonster() {
 		monsterImg(target.name);
 		prevImg = document.querySelector('img').src;
 		searchInput[0].value = '';
+		deleteSuggestions();
+		word = [];
 		hideLoading();
 	}
 }

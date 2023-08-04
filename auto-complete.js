@@ -107,7 +107,7 @@ monsterNamesTrie.insert('Zinogre');
 let word = [];
 /**  Element that shows autocomplete options below search bar. */
 const dropdown = document.getElementById('autocomplete-options');
-/**  Helper function for loading suggestions */
+/**  Helper function for loading suggestions, adds event listeners to each suggestion. */
 function loadSuggestions() {
 	for (let i = 0; i < monsterNamesTrie.find(word).length; i++) {
 		const newSuggestion = document.createElement('p');
@@ -115,7 +115,18 @@ function loadSuggestions() {
 		newSuggestion.appendChild(suggestion);
 		dropdown.appendChild(newSuggestion);
 		newSuggestion.setAttribute('id', `option-${i}`);
+		newSuggestion.setAttribute('tabindex', i + 1);
+		document.querySelector('button').setAttribute('tabindex', i + 1);
 		newSuggestion.addEventListener('click', selectSuggestion.bind('this', i));
+		newSuggestion.addEventListener('focus', focusSuggestion.bind('this', i));
+		newSuggestion.addEventListener('keydown', (event) => {
+			if (event.key === 'Enter') {
+				FetchMonster();
+				word = [];
+				lastInput = 0;
+				deleteSuggestions();
+			}
+		});
 	}
 }
 /**  Helper function for deleting all suggestions. */
@@ -152,4 +163,9 @@ function autoComplete(input) {
 function selectSuggestion(n) {
 	searchInput[0].value = document.getElementById(`option-${n}`).textContent;
 	searchInput[0].focus();
+}
+
+/** If focused suggestion and 'Enter' is pressed on keyboard. */
+function focusSuggestion(f) {
+	searchInput[0].value = document.getElementById(`option-${f}`).textContent;
 }
