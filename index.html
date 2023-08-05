@@ -34,11 +34,12 @@
                 <button onclick="commenceFetchAndClear()">Search</button>
                 <div id="monster-image">
                     <div id="loading" class=""></div>
-                    <img alt="">
+                    <span id="img-span" style="position: absolute;">Awaiting search...</span>
+                    <img id="m-img" src="" alt="">
                 </div>
             </div>
             <div class="right-panel">
-                <nav class="info-tabs">
+                <nav id="info-tabs">
                     <div id="tab_description" onclick="changeInformationCard('description')">Ecology</div>
                     <div id="tab_weakness-resistance" onclick="changeInformationCard('weakness')">Physiology</div>
                     <div id="tab_rewards" onclick="changeInformationCard('reward')">Rewards</div>
@@ -56,10 +57,14 @@
                         <p id="description"></p>
                     </div>
                     <div id="card_weakness" class="card hide">
-                        <span>Weaknesses: </span>
-                        <ul id="weaknesses"></ul>
-                        <span>Resistances: </span>
-                        <ul id="resistances"></ul>
+                        <div>
+                            <span>Weaknesses: </span>
+                            <ul id="weaknesses"></ul>
+                        </div>
+                        <div>
+                            <span>Resistances: </span>
+                            <ul id="resistances"></ul>
+                        </div>
                     </div>
                     <div id="card_reward" class="card hide">
                         <span>Rewards: </span>

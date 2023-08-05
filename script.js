@@ -63,6 +63,7 @@ function commenceFetchAndClear() {
 /**  fetch monster data (name, species, biome/s, description,
 resistances & weaknesses, rewards). */
 async function FetchMonster() {
+	document.getElementById('img-span').textContent = '';
 	let prevImg = document.querySelector('img').src;
 	document.querySelector('img').src = '';
 	showLoading();
@@ -210,3 +211,17 @@ function changeInformationCard(card) {
 		document.getElementById('card_reward').classList.remove('hide');
 	}
 }
+
+window.onload = () => {
+	if (document.getElementById('m-img').getAttribute('src') === '') {
+	}
+	if (window.innerWidth < 900) {
+		document.getElementById('card_weakness').classList.remove('hide');
+		document.getElementById('card_weakness').classList.add('spacing');
+		document.getElementById('card_reward').classList.remove('hide');
+		document.getElementById('card_reward').classList.add('spacing');
+		document.getElementById('info-tabs').remove();
+		document.querySelector('hr').remove();
+		document.getElementById('card_description').classList.add('spacing');
+	}
+};
