@@ -16,4 +16,4 @@ Learned about using trie data-structure for implementing auto-complete in the se
 
 ## Deployment
 
-This site was deployed using [github pages](https://pages.github.com/). Click [here](https://khaledajaj2026.github.io/DSA-problem-tracker/) to see site.
+This site was deployed using [github pages](https://pages.github.com/). Click [here](https://khaledajaj2026.github.io/mhw-notebook/) to see site.
