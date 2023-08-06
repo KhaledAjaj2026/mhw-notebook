@@ -1,7 +1,6 @@
 /**  List of all large monster names, used for auto-complete. */
 const monstersImgLinks = {
-	greatJagras:
-		'https://static.wikia.nocookie.net/monsterhunter/images/f/f5/MHW-Great_Jagras_Render_001.png/revision/latest?cb=20171012121738',
+	greatJagras: 'assets/monsters/great-jagras.webp',
 	kuluYaku:
 		'https://static.wikia.nocookie.net/monsterhunter/images/0/0e/MHRise-Kulu-Ya-Ku_Render_001.png/revision/latest?cb=20210308150155',
 	anjanath:
