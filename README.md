@@ -11,7 +11,7 @@ Learned about using trie data-structure for implementing auto-complete in the se
 ## Possible Future Updates
 
 * Major style makeover, current style is bland but works to show funcitonality.
-* Images do not fetch when deployed on Pages; change from fetching image of monster to loading local files.
+* Images are all stored on frontend; create an app to serve photos to frontend to reduce loading lag.
 * Possibly help update API source code, as some data is missing about some monsters (e.g. 'rewards' show up empty).
 
 ## Deployment
