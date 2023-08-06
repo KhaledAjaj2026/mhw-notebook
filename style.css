@@ -266,7 +266,6 @@ p,
 
 .info-cards .card {
   height: 50%;
-  overflow: scroll;
   position: absolute;
   min-height: -moz-max-content;
   min-height: max-content;
