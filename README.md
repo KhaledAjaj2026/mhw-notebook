@@ -16,4 +16,4 @@ Learned about using trie data-structure for implementing auto-complete in the se
 
 ## Deployment
 
-This site was deployed using [netlify](https://www.netlify.com/?attr=homepage-modal). Click [here](https://mhw-huntersnotes.netlify.app/)https://mhw-huntersnotes.netlify.app/) to see site.
+This site was deployed using [netlify](https://www.netlify.com/?attr=homepage-modal). Click [here](https://mhw-huntersnotes.netlify.app/) to see site.
