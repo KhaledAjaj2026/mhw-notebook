@@ -10,7 +10,7 @@ Learned about using trie data-structure for implementing auto-complete in the se
 
 ## Possible Future Updates
 
-* Major style makeover, current style is bland but works to show funcitonality.
+* Major style makeover, current style is ok but works to show funcitonality.
 * Images are all stored on frontend; create an app to serve photos to frontend to reduce loading lag.
 * Possibly help update API source code, as some data is missing about some monsters (e.g. 'rewards' show up empty).
 
