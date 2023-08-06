@@ -163,7 +163,6 @@ function selectSuggestion(n) {
 	for (let i = 0; i < searchInput[0].value.length; i++) {
 		word.push(searchInput[0].value[i]);
 	}
-	console.log(word.join(''));
 	searchInput[0].focus();
 }
 
@@ -174,5 +173,4 @@ function focusSuggestion(f) {
 	for (let i = 0; i < searchInput[0].value.length; i++) {
 		word.push(searchInput[0].value[i]);
 	}
-	console.log(word.join(''));
 }

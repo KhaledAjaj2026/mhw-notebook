@@ -1,51 +1,51 @@
 /* Background Image Variables */
 /* Background Image classes */
 .ast {
-  background-image: url("./assets/astera.jpeg");
+  background-image: url("./assets/biomes/astera.jpeg");
 }
 
 .af {
-  background-image: url("./assets/ancient-forest.png");
+  background-image: url("./assets/biomes/ancient-forest.png");
 }
 
 .ww {
-  background-image: url("./assets/wildspire-waste.png");
+  background-image: url("./assets/biomes/wildspire-waste.png");
 }
 
 .ch {
-  background-image: url("./assets/coral-highlands.png");
+  background-image: url("./assets/biomes/coral-highlands.png");
 }
 
 .rv {
-  background-image: url("./assets/rotten-vale.png");
+  background-image: url("./assets/biomes/rotten-vale.png");
 }
 
 .er {
-  background-image: url("./assets/elder-recess.png");
+  background-image: url("./assets/biomes/elder-recess.png");
 }
 
 .hr {
-  background-image: url("./assets/hoarfrost-reach.jpg");
+  background-image: url("./assets/biomes/hoarfrost-reach.jpg");
 }
 
 .coed {
-  background-image: url("./assets/caverns-of-el-dorado.jpg");
+  background-image: url("./assets/biomes/caverns-of-el-dorado.jpg");
 }
 
 .cof {
-  background-image: url("./assets/confluence-of-fates.jpeg");
+  background-image: url("./assets/biomes/confluence-of-fates.jpeg");
 }
 
 .gr {
-  background-image: url("./assets/great-ravine.jpg");
+  background-image: url("./assets/biomes/great-ravine.jpg");
 }
 
 .gl {
-  background-image: url("./assets/guiding-lands.jpg");
+  background-image: url("./assets/biomes/guiding-lands.jpg");
 }
 
 .sv {
-  background-image: url("./assets/secluded-valley.jpg");
+  background-image: url("./assets/biomes/secluded-valley.jpg");
 }
 
 header {

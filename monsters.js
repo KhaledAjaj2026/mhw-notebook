@@ -1,88 +1,47 @@
 /**  List of all large monster names, used for auto-complete. */
 const monstersImgLinks = {
-	greatJagras: 'assets/monsters/great-jagras.webp',
-	kuluYaku:
-		'https://static.wikia.nocookie.net/monsterhunter/images/0/0e/MHRise-Kulu-Ya-Ku_Render_001.png/revision/latest?cb=20210308150155',
-	anjanath:
-		'https://static.wikia.nocookie.net/monsterhunter/images/6/6b/MHRise-Anjanath_Render_001.png/revision/latest?cb=20210308144806',
-	pukeiPukei:
-		'https://static.wikia.nocookie.net/monsterhunter/images/1/13/MHRise-Pukei-Pukei_Render_001.png/revision/latest?cb=20210308150521',
-	barroth:
-		'https://static.wikia.nocookie.net/monsterhunter/images/3/3a/MHRise-Barroth_Render_001.png/revision/latest?cb=20210501170957',
-	jyuratodus:
-		'https://static.wikia.nocookie.net/dragons/images/e/ed/MHW-Jyuratodus_Render_001.png/revision/latest?cb=20171213092710',
-	tobiKadachi:
-		'https://static.wikia.nocookie.net/monsterhunter/images/2/22/MHRise-Tobi-Kadachi_Render_001.png/revision/latest?cb=20210308135404',
-	viperTobiKadachi:
-		'https://static.wikia.nocookie.net/monsterhunter/images/0/0f/MHWI-Viper_Tobi-Kadachi_Render_001.png/revision/latest?cb=20190830163335',
-	azureRathalos:
-		'https://static.wikia.nocookie.net/monsterhunter/images/5/50/MHW-Azure_Rathalos_Render_001.png/revision/latest?cb=20200929162339',
-	bazelgeuse:
-		'https://static.wikia.nocookie.net/monsterhunter/images/e/e2/MHW-Bazelgeuse_Render_001.png/revision/latest?cb=20180224091735',
-	behemoth:
-		'https://static.wikia.nocookie.net/monsterhunter/images/c/cc/MHW-Behemoth_Render_001.png/revision/latest?cb=20180712144027',
-	deviljho:
-		'https://static.wikia.nocookie.net/monsterhunter/images/c/cb/MHW-Deviljho_Render_001.png/revision/latest?cb=20180105132807',
-	diablos:
-		'https://static.wikia.nocookie.net/monsterhunter/images/3/39/MHRise-Diablos_Render_001.png/revision/latest?cb=20210217223736',
-	blackDiablos:
-		'https://static.wikia.nocookie.net/monsterhunter/images/d/dc/MHW-Black_Diablos_Render_001.png/revision/latest?cb=20180228105958',
-	dodogama:
-		'https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhw-dodogama_render_001.png',
-	greatGirros:
-		'https://static.wikia.nocookie.net/monsterhunter/images/4/4c/MHW-Great_Girros_Render_001.png/revision/latest?cb=20171112140027',
-	kirin:
-		'https://static.wikia.nocookie.net/monsterhunter/images/f/f5/MHW-Kirin_Render_001.png/revision/latest?cb=20180307103956',
-	kulveTaroth:
-		'https://static.wikia.nocookie.net/monsterhunter/images/0/00/MHW-Kulve_Taroth_Render_002.png/revision/latest?cb=20180419051425',
-	kushalaDaora:
-		'https://static.wikia.nocookie.net/monsterhunter/images/0/07/MHRise-Kushala_Daora_Render_001.png/revision/latest?cb=20210427142445',
-	lavasioth:
-		'https://static.wikia.nocookie.net/monsterhunter/images/8/84/MHW-Lavasioth_Render_001.png/revision/latest?cb=20180610063924',
-	legiana:
-		'https://static.wikia.nocookie.net/monsterhunter/images/3/34/MHW-Legiana_Render_001.png/revision/latest?cb=20171112123234',
-	lunastra:
-		'https://static.wikia.nocookie.net/monsterhunter/images/f/f8/MHW-Lunastra_Render_001.png/revision/latest?cb=20180530122508',
-	nergigante:
-		'https://static.wikia.nocookie.net/monsterhunter/images/8/89/MHW-Nergigante_Render_001.png/revision/latest?cb=20190914060417',
-	odogaron:
-		'https://static.wikia.nocookie.net/monsterhunter/images/9/9f/MHW-Odogaron_Render_001.png/revision/latest?cb=20171112161310',
-	paolumu:
-		'https://static.wikia.nocookie.net/monsterhunter/images/b/b2/MHW-Paolumu_Render_001.png/revision/latest?cb=20171011093216',
-	radobaan:
-		'https://static.wikia.nocookie.net/monsterhunter/images/d/d3/MHW-Radobaan_Render_001.png/revision/latest?cb=20171112152824',
-	rathalos:
-		'https://static.wikia.nocookie.net/monsterhunter/images/0/00/MHRise-Rathalos_Render_001.png/revision/latest?cb=20210107154630',
-	rathian:
-		'https://static.wikia.nocookie.net/monsterhunter/images/b/be/MHRise-Rathian_Render_001.png/revision/latest?cb=20210217224035',
-	pinkRathian:
-		'https://static.wikia.nocookie.net/monsterhunter/images/1/14/MHW-Pink_Rathian_Render_001.png/revision/latest?cb=20180610063906',
-	teostra:
-		'https://static.wikia.nocookie.net/monsterhunter/images/2/29/MHRise-Teostra_Render_001.png/revision/latest?cb=20210427142335',
-	tziTziYaku:
-		'https://static.wikia.nocookie.net/monsterhunter/images/0/04/MHW-Tzitzi-Ya-Ku_Render_001.png/revision/latest?cb=20171011132236',
-	uragaan:
-		'https://static.wikia.nocookie.net/monsterhunter/images/5/52/MHW-Uragaan_Render_001.png/revision/latest?cb=20180224094156',
-	vaalHazak:
-		'https://static.wikia.nocookie.net/monsterhunter/images/5/54/MHW-Vaal_Hazak_Render_001.png/revision/latest?cb=20180214002433',
-	xenoJiiva:
-		'https://static.wikia.nocookie.net/monsterhunter/images/2/2f/MHW-Xeno%27jiiva_Render_001.png/revision/latest?cb=20190412154741',
-	zorahMagdaros:
-		'https://static.wikia.nocookie.net/monsterhunter/images/7/73/MHW-Zorah_Magdaros_Render_001.png/revision/latest?cb=20170921090345',
-	leshen:
-		'https://static.wikia.nocookie.net/monsterhunter/images/0/07/MHW-Leshen_Render_001.png/revision/latest?cb=20191126211820',
-	ancientLeshen:
-		'https://static.wikia.nocookie.net/monsterhunter/images/9/9f/MHW-Ancient_Leshen_Render_001.png/revision/latest?cb=20191126211836',
-	safiJiiva:
-		'https://static.wikia.nocookie.net/monsterhunter/images/9/92/MHWI-Safi%27jiiva_Render_001.png/revision/latest?cb=20191207124403',
-	zinogre:
-		'https://static.wikia.nocookie.net/monsterhunter/images/3/37/MHRise-Zinogre_Render_001.png/revision/latest?cb=20210308141128',
-	stygianZinogre:
-		'https://static.wikia.nocookie.net/monsterhunter/images/e/ee/MHWI-Stygian_Zinogre_Render_001.png/revision/latest?cb=20191124095634',
-	rajang:
-		'https://static.wikia.nocookie.net/monsterhunter/images/6/6d/MHRise-Rajang_Render_001.png/revision/latest?cb=20210217224211',
-	namielle:
-		'https://static.wikia.nocookie.net/monsterhunter/images/d/d6/MHWI-Namielle_Render_001.png/revision/latest/scale-to-width-down/1200?cb=20190829150307',
+	greatJagras: 'assets/monsters-min/great-jagras.webp',
+	kuluYaku: 'assets/monsters-min/kulu-ya-ku.webp',
+	anjanath: 'assets/monsters-min/anjanath.webp',
+	pukeiPukei: 'assets/monsters-min/pukei-pukei.webp',
+	barroth: 'assets/monsters-min/barroth.webp',
+	jyuratodus: 'assets/monsters-min/jyuratodus.webp',
+	tobiKadachi: 'assets/monsters-min/tobi-kadachi.webp',
+	viperTobiKadachi: 'assets/monsters-min/v-tobi-kadachi.webp',
+	azureRathalos: 'assets/monsters-min/azure-rathalos.webp',
+	bazelgeuse: 'assets/monsters-min/bazelgeuse.webp',
+	behemoth: 'assets/monsters-min/behemoth.webp',
+	deviljho: 'assets/monsters-min/deviljho.webp',
+	diablos: 'assets/monsters-min/diablos.webp',
+	blackDiablos: 'assets/monsters-min/black-diablos.webp',
+	dodogama: 'assets/monsters-min/doodgama.png',
+	greatGirros: 'assets/monsters-min/great-girros.webp',
+	kirin: 'assets/monsters-min/kirin.webp',
+	kulveTaroth: 'assets/monsters-min/kulve-taroth.webp',
+	kushalaDaora: 'assets/monsters-min/kushala-daora.webp',
+	lavasioth: 'assets/monsters-min/lavasioth.webp',
+	legiana: 'assets/monsters-min/legiana.webp',
+	lunastra: 'assets/monsters-min/lunastra.webp',
+	nergigante: 'assets/monsters-min/nergigante.webp',
+	odogaron: 'assets/monsters-min/odogaron.webp',
+	paolumu: 'assets/monsters-min/paolumu.webp',
+	radobaan: 'assets/monsters-min/radobaan.webp',
+	rathalos: 'assets/monsters-min/rathalos.webp',
+	rathian: 'assets/monsters-min/rathian.webp',
+	pinkRathian: 'assets/monsters-min/pink-rathian.webp',
+	teostra: 'assets/monsters-min/teostra.webp',
+	tziTziYaku: 'assets/monsters-min/tzitzi-ya-ku.webp',
+	uragaan: 'assets/monsters-min/uragaan.webp',
+	vaalHazak: 'assets/monsters-min/vaal-hazak.webp',
+	xenoJiiva: 'assets/monsters-min/xeno-jiiva.webp',
+	zorahMagdaros: 'assets/monsters-min/zorah-magdaros.webp',
+	leshen: 'assets/monsters-min/leshen.webp',
+	ancientLeshen: 'assets/monsters-min/ancient-leshen.webp',
+	safiJiiva: 'assets/monsters-min/safi-jiiva.webp',
+	zinogre: 'assets/monsters-min/zinogre.webp',
+	stygianZinogre: 'assets/monsters-min/stygian-zinogre.webp',
+	rajang: 'assets/monsters-min/rajang.webp',
+	namielle: 'assets/monsters-min/namielle.webp',
 };
 
 /**  Retrieve image link of monster online. */
@@ -190,10 +149,10 @@ function monsterImg(name) {
 		case 'Zorah Magdaros':
 			document.querySelector('img').src = monstersImgLinks.zorahMagdaros;
 			break;
-		case 'Leshin':
+		case 'Leshen':
 			document.querySelector('img').src = monstersImgLinks.leshen;
 			break;
-		case 'Ancient Leshin':
+		case 'Ancient Leshen':
 			document.querySelector('img').src = monstersImgLinks.ancientLeshen;
 			break;
 		case "Safi'Jiiva":
