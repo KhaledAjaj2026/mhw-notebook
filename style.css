@@ -127,8 +127,8 @@ ul {
 }
 
 .main_area {
-  background-color: bisque;
-  background-color: rgba(235, 210, 194, 0.8);
+  background: linear-gradient(135deg, rgba(249, 232, 221, 0.85), rgba(204, 154, 119, 0.85));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bb5816", endColorstr="#73350c", GradientType=1);
   border: 2px solid black;
   border-radius: 5px;
   margin: 50px;
@@ -182,6 +182,58 @@ p,
 
 #monster-search {
   width: 200px;
+  height: 36px;
+  border: 0;
+  box-shadow: rgba(58, 21, 5, 0.4) 0 2px 4px, rgba(35, 9, 3, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  border-radius: 3px;
+  font-size: 18px;
+}
+
+.search-button {
+  align-items: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #bf5050 0, #582810 100%);
+  border: 0;
+  border-radius: 3px;
+  box-shadow: rgba(58, 21, 5, 0.4) 0 2px 4px, rgba(20, 5, 1, 0.3) 0 7px 13px -3px, rgba(27, 13, 1, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Instrument Serif", "Times New Roman", Times, serif;
+  height: 36px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.search-button:focus {
+  box-shadow: #bf5050 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #bf5050 0 -3px 0 inset;
+}
+
+.search-button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #bf5050 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.search-button:active {
+  box-shadow: #bf5050 0 3px 7px inset;
+  transform: translateY(2px);
 }
 
 #autocomplete-options {
@@ -226,8 +278,9 @@ p,
   }
 }
 #monster-image {
-  border: 2px solid black;
+  border: 0;
   border-radius: 5px;
+  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.75);
   margin: auto;
   margin-top: 50px;
   width: 250px;
@@ -268,12 +321,59 @@ p,
 }
 #info-tabs div {
   margin: 0 10px;
-  border: 2px solid black;
-  border-radius: 10px;
+  border: 0;
+  border-radius: 5px;
   padding: 5px;
 }
 #info-tabs div:hover {
   cursor: pointer;
+}
+
+.info-button {
+  align-items: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #bf5050 0, #582810 100%);
+  border: 0;
+  border-radius: 3px;
+  box-shadow: rgba(58, 21, 5, 0.4) 0 2px 4px, rgba(20, 5, 1, 0.3) 0 7px 13px -3px, rgba(27, 13, 1, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Instrument Serif", "Times New Roman", Times, serif;
+  height: 36px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.info-button:focus {
+  box-shadow: #bf5050 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #bf5050 0 -3px 0 inset;
+}
+
+.info-button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #bf5050 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.info-button:active {
+  box-shadow: #bf5050 0 3px 7px inset;
+  transform: translateY(2px);
 }
 
 .info-cards .card {
