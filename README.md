@@ -10,10 +10,10 @@ Learned about using trie data-structure for implementing auto-complete in the se
 
 ## Possible Future Updates
 
-* Major style makeover, current style is bland but works to show funcitonality.
-* Images do not fetch when deployed on Pages; change from fetching image of monster to loading local files.
+* Major style makeover, current style is ok but works to show funcitonality.
+* Images are all stored on frontend; create an app to serve photos to frontend to reduce loading lag.
 * Possibly help update API source code, as some data is missing about some monsters (e.g. 'rewards' show up empty).
 
 ## Deployment
 
-This site was deployed using [github pages](https://pages.github.com/). Click [here](https://khaledajaj2026.github.io/mhw-notebook/) to see site.
+This site was deployed using [netlify](https://www.netlify.com/?attr=homepage-modal). Click [here](https://mhw-huntersnotes.netlify.app/) to see site.
