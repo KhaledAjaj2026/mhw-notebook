@@ -155,7 +155,7 @@ function monsterImg(name) {
 		case 'Ancient Leshen':
 			document.querySelector('img').src = monstersImgLinks.ancientLeshen;
 			break;
-		case "Safi'Jiiva":
+		case "Safi'jiiva":
 			document.querySelector('img').src = monstersImgLinks.safiJiiva;
 			break;
 		case 'Zinogre':

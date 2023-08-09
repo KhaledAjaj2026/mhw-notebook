@@ -2,50 +2,62 @@
 /* Background Image classes */
 .ast {
   background-image: url("./assets/biomes/astera.jpeg");
+  image-rendering: pixelated;
 }
 
 .af {
   background-image: url("./assets/biomes/ancient-forest.png");
+  image-rendering: pixelated;
 }
 
 .ww {
   background-image: url("./assets/biomes/wildspire-waste.png");
+  image-rendering: pixelated;
 }
 
 .ch {
   background-image: url("./assets/biomes/coral-highlands.png");
+  image-rendering: pixelated;
 }
 
 .rv {
   background-image: url("./assets/biomes/rotten-vale.png");
+  image-rendering: pixelated;
 }
 
 .er {
   background-image: url("./assets/biomes/elder-recess.png");
+  image-rendering: pixelated;
 }
 
 .hr {
   background-image: url("./assets/biomes/hoarfrost-reach.jpg");
+  image-rendering: pixelated;
 }
 
 .coed {
   background-image: url("./assets/biomes/caverns-of-el-dorado.jpg");
+  image-rendering: pixelated;
 }
 
 .cof {
   background-image: url("./assets/biomes/confluence-of-fates.jpeg");
+  image-rendering: pixelated;
 }
 
 .gr {
   background-image: url("./assets/biomes/great-ravine.jpg");
+  image-rendering: pixelated;
 }
 
 .gl {
   background-image: url("./assets/biomes/guiding-lands.jpg");
+  image-rendering: pixelated;
 }
 
 .sv {
   background-image: url("./assets/biomes/secluded-valley.jpg");
+  image-rendering: pixelated;
 }
 
 header {
