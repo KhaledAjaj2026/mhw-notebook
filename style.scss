@@ -1,0 +1,458 @@
+/* Background Image Variables */
+
+$ast: './assets/biomes/astera.jpeg';
+$af: './assets/biomes/ancient-forest.png';
+$ww: './assets/biomes/wildspire-waste.png';
+$ch: './assets/biomes/coral-highlands.png';
+$rv: './assets/biomes/rotten-vale.png';
+$er: './assets/biomes/elder-recess.png';
+$hr: './assets/biomes/hoarfrost-reach.jpg';
+$coed: './assets/biomes/caverns-of-el-dorado.jpg';
+$cof: './assets/biomes/confluence-of-fates.jpeg';
+$gr: './assets/biomes/great-ravine.jpg';
+$gl: './assets/biomes/guiding-lands.jpg';
+$sv: './assets/biomes/secluded-valley.jpg';
+
+/* Background Image classes */
+.ast {
+	background-image: url($ast);
+	image-rendering: pixelated;
+}
+
+.af {
+	background-image: url($af);
+	image-rendering: pixelated;
+}
+
+.ww {
+	background-image: url($ww);
+	image-rendering: pixelated;
+}
+
+.ch {
+	background-image: url($ch);
+	image-rendering: pixelated;
+}
+
+.rv {
+	background-image: url($rv);
+	image-rendering: pixelated;
+}
+
+.er {
+	background-image: url($er);
+	image-rendering: pixelated;
+}
+
+.hr {
+	background-image: url($hr);
+	image-rendering: pixelated;
+}
+
+.coed {
+	background-image: url($coed);
+	image-rendering: pixelated;
+}
+
+.cof {
+	background-image: url($cof);
+	image-rendering: pixelated;
+}
+
+.gr {
+	background-image: url($gr);
+	image-rendering: pixelated;
+}
+
+.gl {
+	background-image: url($gl);
+	image-rendering: pixelated;
+}
+
+.sv {
+	background-image: url($sv);
+	image-rendering: pixelated;
+}
+
+header {
+	.title-text {
+		margin: 0;
+	}
+
+	color: white;
+	background-color: black;
+	background-color: rgba(0, 0, 0, 0.6);
+	text-align: center;
+	width: 50vw;
+	margin: auto;
+	padding: 20px 10px;
+	margin-left: 25vw;
+	border-radius: 5px;
+}
+
+@media screen and (max-width: 500px) {
+	header {
+		width: 100vw;
+		margin: 0;
+		margin-bottom: 20px;
+		padding: 0;
+		border-radius: 0;
+	}
+}
+
+body {
+	background-position: 45%;
+	background-size: cover;
+	image-rendering: optimizeSpeed;
+}
+
+@media screen and (min-height: 980px) {
+	body {
+		margin: 10vh auto 25vh;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	body {
+		width: 100vw;
+		margin: 0;
+		border-radius: 0;
+	}
+}
+
+.hide {
+	visibility: hidden;
+}
+
+.main-header {
+	font-family: 'Instrument Serif', 'Times New Roman', Times, serif;
+	font-size: 3em;
+}
+
+.sub-header {
+	font-family: 'Instrument Serif', 'Times New Roman', Times, serif;
+	font-size: 2.5em;
+}
+
+.description-header {
+	font-family: 'DM Serif Display', sans-serif;
+}
+
+p,
+ul {
+	font-family: sans-serif;
+	font-size: 1.25em;
+}
+
+.main_area {
+	background: linear-gradient(135deg, rgba(249, 232, 221, 0.85), rgba(204, 154, 119, 0.85));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bb5816', endColorstr='#73350c', GradientType=1);
+	border: 2px solid black;
+	border-radius: 5px;
+	margin: 50px;
+	padding: 20px;
+}
+
+@media screen and (max-width: 500px) {
+	.main_area {
+		width: 100vw;
+		margin: 0;
+		padding: 0;
+		border: none;
+		border-radius: 0;
+	}
+}
+
+.panels {
+	display: flex;
+	justify-content: center;
+}
+
+@media screen and (max-width: 900px) {
+	.panels {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.left-panel,
+.right-panel {
+	margin: 1.5em;
+	padding: 2em;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+@media screen and (max-width: 900px) {
+
+	.left-panel,
+	.right-panel {
+		width: 80%;
+	}
+}
+
+span,
+p,
+.search-title {
+	margin: 0 auto 0.7em;
+}
+
+.search-title {
+	font-family: 'DM Serif Display', sans-serif;
+	font-size: 2em;
+}
+
+#monster-search {
+	width: 200px;
+	height: 36px;
+	border: 0;
+	box-shadow: rgba(58, 21, 5, 0.4) 0 2px 4px, rgba(35, 9, 3, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+	border-radius: 3px;
+	font-size: 18px;
+}
+
+// Button-29 from CSS Scan.
+.search-button {
+	align-items: center;
+	appearance: none;
+	background-image: radial-gradient(100% 100% at 100% 0, #bf5050 0, #582810 100%);
+	border: 0;
+	border-radius: 3px;
+	box-shadow: rgba(58, 21, 5, 0.4) 0 2px 4px, rgba(20, 5, 1, 0.3) 0 7px 13px -3px, rgba(27, 13, 1, 0.5) 0 -3px 0 inset;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	display: inline-flex;
+	font-family: 'Instrument Serif', 'Times New Roman', Times, serif;
+	height: 36px;
+	justify-content: center;
+	line-height: 1;
+	list-style: none;
+	overflow: hidden;
+	padding-left: 10px;
+	padding-right: 10px;
+	position: relative;
+	text-decoration: none;
+	transition: box-shadow .15s, transform .15s;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	white-space: nowrap;
+	will-change: box-shadow, transform;
+	font-size: 18px;
+}
+
+.search-button:focus {
+	box-shadow: #bf5050 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #bf5050 0 -3px 0 inset;
+}
+
+.search-button:hover {
+	box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #bf5050 0 -3px 0 inset;
+	transform: translateY(-2px);
+}
+
+.search-button:active {
+	box-shadow: #bf5050 0 3px 7px inset;
+	transform: translateY(2px);
+}
+
+#autocomplete-options {
+	background-color: white;
+	width: 200px;
+	position: absolute;
+
+	p {
+		margin: 0;
+		border-top: 1px solid black;
+		font-size: 1em;
+		font-family: 'DM Serif Display', sans-serif;
+		padding-left: 5px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+#loading {
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	border: 5px solid #5a5a5a;
+	border-top: 6px solid #70f552;
+	border-radius: 100%;
+	visibility: hidden;
+	animation: spin 1s infinite linear;
+}
+
+#loading.display {
+	visibility: visible;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+#monster-image {
+	border: 0;
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.75);
+	margin: auto;
+	margin-top: 50px;
+	width: 250px;
+	height: 250px;
+	background-color: burlywood;
+	background-color: rgb(180, 158, 145);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	img {
+		image-rendering: optimizeSpeed;
+		width: 90%;
+		height: auto;
+		margin: 10px;
+	}
+}
+
+.right-panel {
+	min-height: 150px;
+
+	span {
+		font-family: 'DM Serif Display', sans-serif;
+		font-weight: bold;
+		font-size: 1.2em;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.right-panel {
+		width: 80vw;
+	}
+}
+
+#info-tabs {
+	font-family: 'Instrument Serif', 'Times New Roman', Times, serif;
+	font-weight: bold;
+	font-size: 1.2em;
+	display: flex;
+	justify-content: space-around;
+
+	div {
+		margin: 0 10px;
+		border: 0;
+		border-radius: 5px;
+		padding: 5px;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.info-button {
+	align-items: center;
+	appearance: none;
+	background-image: radial-gradient(100% 100% at 100% 0, #bf5050 0, #582810 100%);
+	border: 0;
+	border-radius: 3px;
+	box-shadow: rgba(58, 21, 5, 0.4) 0 2px 4px, rgba(20, 5, 1, 0.3) 0 7px 13px -3px, rgba(27, 13, 1, 0.5) 0 -3px 0 inset;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	display: inline-flex;
+	font-family: 'Instrument Serif', 'Times New Roman', Times, serif;
+	height: 36px;
+	justify-content: center;
+	line-height: 1;
+	list-style: none;
+	overflow: hidden;
+	padding-left: 10px;
+	padding-right: 10px;
+	position: relative;
+	text-decoration: none;
+	transition: box-shadow .15s, transform .15s;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	white-space: nowrap;
+	will-change: box-shadow, transform;
+	font-size: 18px;
+}
+
+.info-button:focus {
+	box-shadow: #bf5050 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #bf5050 0 -3px 0 inset;
+}
+
+.info-button:hover {
+	box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #bf5050 0 -3px 0 inset;
+	transform: translateY(-2px);
+}
+
+.info-button:active {
+	box-shadow: #bf5050 0 3px 7px inset;
+	transform: translateY(2px);
+}
+
+.info-cards {
+	.card {
+		height: 50%;
+		// overflow: scroll;
+		position: absolute;
+		min-height: max-content;
+	}
+
+	p {
+		margin-right: 120px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.info-cards {
+		.card {
+			position: static;
+		}
+
+		p {
+			margin: 0;
+		}
+	}
+}
+
+.spacing {
+	margin-bottom: 15px;
+}
+
+#card_weakness {
+	display: flex;
+	justify-content: space-evenly;
+
+	span {
+		margin: auto 10px;
+	}
+}
+
+hr {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	border: 1px solid black;
+}
+
+footer {
+	background-color: white;
+	background-color: rgba(255, 255, 255, 0.6);
+	width: 50%;
+	text-align: center;
+	margin: 20px auto 30px;
+	font-weight: bold;
+}
