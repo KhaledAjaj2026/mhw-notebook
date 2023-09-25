@@ -15,16 +15,16 @@ document.querySelector('input').addEventListener('keyup', (event) => {
 /** Length of previous input into search bar, used to prevent input of
  * keys such as 'Shift'.
  */
-let lastInput = 0;
+let lastInputLength = 0;
 // Event listener for keyboard input.
 document.querySelector('input').addEventListener('input', (event) => {
 	let char = event.target.value;
 	if (char.length === 0) {
-		lastInput = 0;
+		lastInputLength = 0;
 		word = [];
 	}
 	if (
-		char.length > lastInput &&
+		char.length > lastInputLength &&
 		searchInput[0].value.length > 0 &&
 		inputRegex.test(char)
 	) {
@@ -38,7 +38,7 @@ document.querySelector('input').addEventListener('input', (event) => {
 		} else {
 			autoComplete(char[char.length - 1]);
 		}
-		lastInput++;
+		lastInputLength++;
 	}
 });
 
@@ -56,29 +56,32 @@ function hideLoading() {
 function commenceFetchAndClear() {
 	FetchMonster();
 	word = [];
-	lastInput = 0;
+	lastInputLength = 0;
 	deleteSuggestions();
 }
 
 /**  fetch monster data (name, species, biome/s, description,
 resistances & weaknesses, rewards). */
 async function FetchMonster() {
+	// removes text 'Awaiting search...' from image box once fetch initiated.
 	document.getElementById('img-span').textContent = '';
+	/** Holds reference to previous image if search input cannot be found. */
 	let prevImg = document.querySelector('img').src;
 	document.querySelector('img').src = '';
 	showLoading();
-	// get monster name from search.
+	/** get monster name from search to compare with API fetch. */
 	const monsterName = word.join('');
 	// fetch data of provided monster name.
 	const response = await fetch(`https://mhw-db.com/monsters/`);
 	const data = await response.json();
+	/** Variable to hold monster data, if found. */
 	let target;
 	for (let i = 0; i < data.length; i++) {
 		if (data[i].name === monsterName) {
 			target = data[i];
 		}
 	}
-	// Input is invalid, does not return monster and previous image is returned to view.
+	// Input is invalid, does not return monster, and previous image is returned to view.
 	if (!target) {
 		searchInput[0].value = '';
 		word = [];
@@ -101,9 +104,9 @@ async function FetchMonster() {
 		if (
 			document.getElementById('card_description').classList.contains('hide')
 		) {
+			// set 'Ecology' tab to show once monster loads, if separate tab is open instead.
 			changeInformationCard('description');
 		}
-		prevImg = document.querySelector('img').src;
 		searchInput[0].value = '';
 		hideLoading();
 	}
@@ -212,6 +215,7 @@ function changeInformationCard(card) {
 	}
 }
 
+// Checks for tablet/mobile viewport to set elements into mobile-view mode.
 window.onload = () => {
 	if (document.getElementById('m-img').getAttribute('src') === '') {
 	}

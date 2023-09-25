@@ -21,6 +21,7 @@ class Trie {
 	constructor() {
 		this.root = new TrieNode(null);
 	}
+	// inserts word into trie for future reference.
 	insert(word) {
 		let node = this.root;
 		for (let i = 0; i < word.length; i++) {
@@ -34,6 +35,7 @@ class Trie {
 			}
 		}
 	}
+	// finds words related to provided prefix (DO => DOVE || DOG).
 	find(prefix) {
 		let node = this.root;
 		let output = [];
@@ -47,6 +49,7 @@ class Trie {
 		this.findAllWords(node, output);
 		return output;
 	}
+	// return all words that relate to provided prefix.
 	findAllWords(node, arr) {
 		if (node.end) {
 			arr.unshift(node.getWord());
@@ -166,7 +169,7 @@ function selectSuggestion(n) {
 	searchInput[0].focus();
 }
 
-/** If focused suggestion and 'Enter' is pressed on keyboard. */
+/** Suggestion focused via keyboard navigation and input using 'Enter' key. */
 function focusSuggestion(f) {
 	searchInput[0].value = document.getElementById(`option-${f}`).textContent;
 	word = [];
